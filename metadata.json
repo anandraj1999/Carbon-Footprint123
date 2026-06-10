@@ -1,0 +1,6 @@
+{
+  "name": "Carbon Trace",
+  "description": "An interactive, accessible platform to understand, track, calculate, and reduce your carbon footprint with personalized AI actionable insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

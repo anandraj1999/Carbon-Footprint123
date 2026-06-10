@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply font-sans transition-colors duration-300;
+  }
+}
+
+/* LIGHT MODE SOLID COHESION: Ensure absolute black text everywhere in light mode */
+html.light,
+html.light body,
+html.light main,
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6,
+html.light p,
+html.light span:not(.text-white):not(.contrast-exclude),
+html.light label,
+html.light select,
+html.light input,
+html.light textarea,
+html.light blockquote,
+html.light li {
+  color: #000000 !important;
+}
+
+/* Explicitly override standard muted classes in light mode for AA/AAA compliance and black text directive */
+html.light .text-slate-500,
+html.light .text-slate-400,
+html.light .text-slate-600,
+html.light .text-slate-700,
+html.light .text-slate-800,
+html.light .text-slate-900,
+html.light .text-emerald-800,
+html.light .text-emerald-700,
+html.light .text-emerald-600,
+html.light .text-emerald-950,
+html.light .text-emerald-900,
+html.light .opacity-70,
+html.light .opacity-80,
+html.light .opacity-85 {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+/* Optimize color badges in light mode so they are extremely legible against white/light backgrounds while maintaining high contrast in black and deep vibrant colors */
+html.light .text-emerald-400 {
+  color: #047857 !important; /* Deep emerald */
+}
+html.light .text-blue-400 {
+  color: #1d4ed8 !important; /* Deep transport blue */
+}
+html.light .text-amber-400 {
+  color: #b55d00 !important; /* Deep energy amber */
+}
+html.light .text-purple-400 {
+  color: #6d28d9 !important; /* Deep waste purple */
+}
+html.light .text-emerald-500 {
+  color: #065f46 !important; /* Darker green */
+}
+
+/* Custom Accessibility Smoothness & Accent highlights */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2;
+}
+
+/* WCAG high-contrast focus indicators */
+*:focus-visible {
+  outline: 3px solid #10b981;
+  outline-offset: 2px;
+}
