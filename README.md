@@ -26,7 +26,7 @@ https://carbon-trace-903383976997.asia-southeast1.run.app/
 
 🔗 **LinkedIn Post**
 
-[Add LinkedIn Post Link Here]
+[https://www.linkedin.com/in/anand-raj-826061377/?skipRedirect=true]
 
 ---
 
